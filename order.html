@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Order | The Burger App</title>
+     <!-- FONTS -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+     <!-- ICONS -->
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@24,400,1,0">
+     <!-- STYLES -->
+     <link rel="stylesheet" href="css/reset.css">
+     <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+     <div id="main-container">
+          <header>
+               <!-- ORDER NAV -->
+              <div id="order-nav" class="container">
+                    <a class="nav-btn" href="index.html"><span class="material-symbols-sharp">navigate_before</span></a>
+                    <a class="nav-btn" id="order-nav-fav-btn" href="#"><span class="material-symbols-sharp">favorite</span></a>                    
+              </div>
+          </header>
+          <main>
+               <!-- ORDER FORM -->               
+               <form id="item-form" class="container" action="#">
+                   
+
+                    <h1 class="item-cart-title">Chipotle Cheesy Chicken</h1>
+                    <h4 class="item-category">A signature flame-grilled chicken patty topped with smoked beef</h4>
+                    
+                    <div class="item-background">
+                         <div class="img-container">
+                              <picture>
+                                   <!-- For viewport less than 899px -->
+                                   <source media="(max-width: 899px)" 
+                                           srcset="images/burger-1x.png 600w"
+                                           sizes="(max-width: 899px) 50vw">
+                                   
+                                   <!-- For viewport greater than or equal to 900px -->
+                                   <source media="(min-width: 900px)"
+                                           srcset="images/burger-2x.png 1200w"
+                                           sizes="(min-width: 900px) 30vw">
+                                   
+                                   <!-- Default image for browsers that do not support the picture element -->
+                                   <img alt="Photo of a Chipotle Cheesy Chicken Burger"
+                                        src="images/burger-2x.png">
+                             </picture>        
+                         </div>
+                    </div>
+                    
+                    <div class="sizes-container">
+                         <div class="size-wrapper">
+                              <input type="radio" class="size" id="small" name="size" value="small" checked>
+                              <label for="small" aria-label="Small size">S</label>
+                         </div>
+                         <div class="size-wrapper">
+                              <input type="radio" class="size" id="medium" name="size" value="medium">
+                              <label for="medium" aria-label="Medium size">M</label>
+                         </div>    
+                         <div class="size-wrapper">
+                              <input type="radio" class="size" id="large" name="size" value="large">
+                              <label for="large" aria-label="Large size">L</label>
+                         </div>                           
+                    </div>
+                    
+                    
+                    <div class="quantity-container">
+                         <button type="button" onclick="decrement(0)" aria-label="Decrease Quantity">-</button>
+                         <span class="quantity" aria-label="quantity">1</span>                      
+                         <button type="button" onclick="increment(0)" aria-label="Increase Quantity">+</button>     
+                    </div>
+
+                    <div class="subtotal-container">
+                         <span class="txt-price">Price</span>
+                          <!-- FAKE LINK TO GO TO NEXT PAGE, THIS REPLACES BUTTON SUBMIT -->
+                          <a href="cart.html">
+                              <span role="presentation" class="material-symbols-sharp">local_mall</span>
+                              Go to Cart
+                         </a>                         
+                         <span class="item-in-cart-subtotal" id="subtotal-item">20.95</span> 
+                    </div>          
+               </form>     
+          </main>
+     </div>
+
+<script src="js/functions.js"></script>
+</body>
+</html>

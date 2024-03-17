@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Cart | The Burger App</title>
+     <!-- FONTS -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+     <!-- ICONS -->
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@24,400,1,0">
+     <!-- STYLES -->
+     <link rel="stylesheet" href="css/reset.css">
+     <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+     <div id="main-container">
+          <header role="navigation">
+               <!-- ORDER NAV -->
+              <section id="order-nav" class="container">
+                    <a class="nav-btn" aria-label="Back to Order" href="order.html"><span class="material-symbols-sharp">navigate_before</span></a>
+                    <h1 class="item-cart-title">Cart</h1>
+                    <a class="nav-btn" aria-label="Like this product" id="cart-nav-settings-btn" href="#"><span class="material-symbols-sharp">more_vert</span></a>                    
+              </section>
+          </header>
+          <main>
+               <!-- ORDER FORM -->               
+               <form id="cart-form" class="container" action="#">
+                   
+                    <div class="item-in-cart container">
+                         <div class="img-container">
+                              <picture>
+                                   <!-- For viewport less than 899px -->
+                                   <source media="(max-width: 899px)" 
+                                           srcset="images/burger-1x.png 600w"
+                                           sizes="(max-width: 899px) 50vw">
+                                   
+                                   <!-- For viewport greater than or equal to 900px -->
+                                   <source media="(min-width: 900px)"
+                                           srcset="images/burger-2x.png 1200w"
+                                           sizes="(min-width: 900px) 30vw">
+                                   
+                                   <!-- Default image for browsers that do not support the picture element -->
+                                   <img alt="Photo of a Chicken Burger"
+                                        src="images/burger-2x.png">
+                             </picture> 
+                         </div>
+                         <input class="item-cart-title" aria-label="Chipotle Cheesy Chicken burger" type="text" value="Chipotle Cheesy Chicken" readonly>
+                         <a class="item-in-cart-delete" aria-label="Delete Item" onclick="deleteItem(this)" href="#"><span class="material-symbols-sharp">close</span></a>
+                         <div class="item-in-cart-quantity">
+                              <button type="button" aria-label="Decrease Quantity" onclick="decrement(0)">-</button>
+                              <span class="quantity" aria-label="quantity">1</span>                          
+                              <button type="button" aria-label="Increase Quantity" onclick="increment(0)">+</button>     
+                         </div>
+                         <span class="item-in-cart-subtotal subtotal-item">20.95</span>
+                    </div>
+                    
+                    <div class="item-in-cart container">
+                         <div class="img-container">
+                              <picture>
+                                   <!-- For viewport less than 899px -->
+                                   <source media="(max-width: 899px)" 
+                                           srcset="images/cheeseburger-1x.png 600w"
+                                           sizes="(max-width: 899px) 50vw">
+                                   
+                                   <!-- For viewport greater than or equal to 900px -->
+                                   <source media="(min-width: 900px)"
+                                           srcset="images/cheeseburger-2x.png 1200w"
+                                           sizes="(min-width: 900px) 30vw">
+                                   
+                                   <!-- Default image for browsers that do not support the picture element -->
+                                   <img alt="Photo of a Cheese Burger"
+                                        src="images/cheeseburger-2x.png">
+                             </picture>
+                         </div>
+                         <input class="item-cart-title" aria-label="Beef Burger" type="text" value="Beef Burger" readonly>
+                         <a class="item-in-cart-delete" aria-label="Delete Item" onclick="deleteItem(this)" href="#"><span class="material-symbols-sharp">close</span></a>
+                         <div class="item-in-cart-quantity">
+                              <button type="button" aria-label="Decrease Quantity" onclick="decrement(1)">-</button>
+                              <span class="quantity" aria-label="quantity">1</span>                                                      
+                              <button type="button" aria-label="Increase Quantity" onclick="increment(1)">+</button>     
+                         </div>
+                         <span class="item-in-cart-subtotal subtotal-item">18.75</span>
+                    </div>
+                    
+                    <a class="coupons-btn btn" href="#">Apply Coupons <span aria-hidden="true" class="material-symbols-sharp">arrow_right_alt</span></a>
+                         
+                    <div class="divider"></div>
+
+                    <div class="total">
+                         <span>Item Total</span>
+                         <span class="itemsTotalAmount">0.00</span>
+                         <span>Delivery Charge</span>
+                         <span class="deliveryAmount">2.25</span>
+                         <span>Tax</span>
+                         <span class="taxAmount">0.00</span>
+                         <span>Total:</span>
+                         <span class="orderTotalAmount">0.00</span>
+                    </div>
+
+                    <a class="proceed-btn btn" href="rate.html">Proceed to payment method</a>
+               </form>     
+          </main>
+     </div>
+
+<script src="js/functions.js"></script>
+</body>
+</html>

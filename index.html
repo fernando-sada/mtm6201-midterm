@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Home | The Burger App</title>
+     <!-- FONTS -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+     <!-- ICONS -->
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@24,400,1,0">
+     <!-- STYLES -->
+     <link rel="stylesheet" href="css/reset.css">
+     <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+     <!-- SKIPLINK -->
+     <div>
+          <ul id="skipnav" aria-hidden="true">
+          <li>
+               <a href="#popular" aria-label="Skip to popular items">Skip to popular items</a>
+          </li>
+          </ul>
+     </div>
+     <!-- SKIPLINK END -->
+
+     <div id="main-container">
+          <header>
+               <!-- PROFILE SECTION -->
+               <div id="profile-section" class="container" role="navigation" aria-label="Main">
+                    <a id="profile-menu" href="#" aria-label="Expand Navigation Menu"><span class="material-symbols-sharp">menu</span></a>
+                    <h2><span id="location-icon" class="material-symbols-sharp">location_on</span>Chicago, <span class="secondary-color">IL</span></h2>
+                    <a id="profile-picture" href="#" aria-label="Profile Settings"><img src="images/burger.svg" alt="" role="presentation"></a>
+               </div>        
+     
+               <!-- SEARCH -->
+               <div id="search-section" class="container">
+                    <h1>Hey!</h1>
+                    <h2>Let's get your order</h2>
+                    <div id="search-bar">
+                         <span id="search-bar-icon" class="material-symbols-sharp">search</span>       
+                         <form role="search">               
+                              <input type="text" aria-label="Type something to search" placeholder="Search our delicious burgers">
+                              <input type="submit" aria-label="Search" value="Search">
+                         </form> 
+                    </div>
+               </div>
+          </header>
+          <main>               
+
+               <!-- CATEGORIES -->                     
+               <div id="categories" class="container">
+                    <a href="order.html" aria-label="Burger Category"><img src="images/burger.svg" alt="" role="presentation">Burgers <span>></span></a>
+                    <a href="order.html" aria-label="Pizza Category"><img src="images/pizza.svg" alt="" role="presentation">Pizza <span>></span></a>
+                    <a href="order.html" aria-label="Cakes Category"><img src="images/cake.svg" alt="" role="presentation">Cakes <span>></span></a>
+               </div>              
+               
+               <!-- POPULAR -->
+               <div id="popular" class="container">
+                    <h2>Popular</h2>
+                    <a class="view-all" aria-label="View all popular products" href="#">View all ></a>
+                    <div class="items">
+                         <div class="item-card">
+                              <a href="order.html" aria-label="Order Chipotle Cheesy Chicken Burger">
+                                   <picture>
+                                        <!-- For viewport less than 899px -->
+                                        <source media="(max-width: 899px)" 
+                                                srcset="images/burger-1x.png 600w"
+                                                sizes="(max-width: 899px) 50vw">
+                                        
+                                        <!-- For viewport greater than or equal to 900px -->
+                                        <source media="(min-width: 900px)"
+                                                srcset="images/burger-2x.png 1200w"
+                                                sizes="(min-width: 900px) 30vw">
+                                        
+                                        <!-- Default image for browsers that do not support the picture element -->
+                                        <img alt="Photo of a Chicken Burger"
+                                             src="images/burger-2x.png">
+                                  </picture>                                  
+                              </a>
+                              <h4 class="item-description">Chipotle Cheesy Chicken</h4>
+                              <h4 class="item-price">$20.95</h4>
+                              <h4 class="item-category">Chicken Burger</h4>
+                         </div>
+                         <div class="item-card">
+                              <a href="order.html" aria-label="Order Pure Cheese Burger">
+                                   <picture>
+                                        <!-- For viewport less than 899px -->
+                                        <source media="(max-width: 899px)" 
+                                                srcset="images/cheeseburger-1x.png 600w"
+                                                sizes="(max-width: 899px) 50vw">
+                                        
+                                        <!-- For viewport greater than or equal to 900px -->
+                                        <source media="(min-width: 900px)"
+                                                srcset="images/cheeseburger-2x.png 1200w"
+                                                sizes="(min-width: 900px) 30vw">
+                                        
+                                        <!-- Default image for browsers that do not support the picture element -->
+                                        <img alt="Photo of a Cheese Burger"
+                                             src="images/cheeseburger-2x.png">
+                                  </picture>
+                              </a>
+                              <h4 class="item-description">Pure Cheese Burger</h4>
+                              <h4 class="item-price">$18.75</h4>
+                              <h4 class="item-category">Meet Burger</h4>
+                         </div>
+                         <div class="item-card">
+                              <a href="order.html" aria-label="Order Onion Burger">
+                                   <picture>
+                                        <!-- For viewport less than 899px -->
+                                        <source media="(max-width: 899px)" 
+                                                srcset="images/onionburger-1x.png 600w"
+                                                sizes="(max-width: 899px) 50vw">
+                                        
+                                        <!-- For viewport greater than or equal to 900px -->
+                                        <source media="(min-width: 900px)"
+                                                srcset="images/onionburger-2x.png 1200w"
+                                                sizes="(min-width: 900px) 30vw">
+                                        
+                                        <!-- Default image for browsers that do not support the picture element -->
+                                        <img alt="Photo of an Onion Burger"
+                                             src="images/onionburger-2x.png">
+                                  </picture>     
+                              </a>
+                              <h4 class="item-description">Onion Burger</h4>
+                              <h4 class="item-price">$19.55</h4>
+                              <h4 class="item-category">Meet Burger</h4>
+                         </div>
+                    </div>
+               </div>
+          </main>
+          
+          <!-- FOOTER NAVIGATION -->
+          <footer id="footer-nav" class="container" aria-label="Footer" role="contentinfo">
+               <nav>
+                    <ul>
+                         <li><a href="index.html" aria-label="Home"><span class="material-symbols-sharp">browse</span>Home</a></li>
+                         <li><a href="#" aria-label="Favorites"><span class="material-symbols-sharp">favorite</span>Favorites</a></li>
+                         <li><a href="#" aria-label="Account"><span class="material-symbols-sharp">person</span>Account</a></li>
+                         <li><a href="#" aria-label="More"><span class="material-symbols-sharp">more_horiz</span>More</a></li>
+                    </ul>
+               </nav>
+          </footer>
+          
+     </div>
+</body>
+</html>
